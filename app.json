@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "JARVIS",
+    "slug": "jarvis-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.ishantupadhyay.jarvis",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FULL_SCREEN_INTENT",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "com.android.alarm.permission.SET_ALARM"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#030816"
+      },
+      "allowBackup": false
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-local-authentication",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      "./plugins/withJarvisActivity"
+    ],
+    "icon": "./assets/icon.png",
+    "scheme": "jarvis",
+    "newArchEnabled": false
+  }
+}

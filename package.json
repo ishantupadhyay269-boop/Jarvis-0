@@ -1,0 +1,35 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "prebuild": "expo prebuild --platform android --clean",
+    "typecheck": "tsc --noEmit",
+    "build:apk": "eas build -p android --profile preview",
+    "apk:local": "expo prebuild --platform android --clean && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "*",
+    "@react-native-voice/voice": "^3.2.4",
+    "expo": "~54.0.0",
+    "expo-battery": "*",
+    "expo-build-properties": "*",
+    "expo-dev-client": "*",
+    "expo-intent-launcher": "*",
+    "expo-local-authentication": "*",
+    "expo-modules-core": "*",
+    "expo-network": "*",
+    "expo-secure-store": "*",
+    "expo-speech": "*",
+    "expo-status-bar": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-safe-area-context": "*"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "typescript": "*"
+  }
+}
