@@ -12,7 +12,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - run: npx expo prebuild --platform android --clean
       - run: cd android && chmod +x gradlew && ./gradlew assembleRelease --no-daemon
       - uses: actions/upload-artifact@v4
